@@ -384,7 +384,7 @@ void updateOutput(uint8_t sinChar)
 int main(void)
 {
  80003d8:	e92d 4ff0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
- 80003dc:	b085      	sub	sp, #20
+ 80003dc:	b091      	sub	sp, #68	; 0x44
 	rcc_clock_setup_in_hse_8mhz_out_72mhz(); 
  80003de:	f002 f96d 	bl	80026bc <rcc_clock_setup_in_hse_8mhz_out_72mhz>
 
@@ -399,16 +399,16 @@ int main(void)
  80003f0:	f000 f86e 	bl	80004d0 <delay_ms>
 	char seno_tabela[qtd_pontos];
 	int i;
-	uint16_t freq_alvo = 5000;
+	uint16_t freq_alvo = 100;
 	float T_incremento = 1000000/(qtd_pontos*freq_alvo); // Em us
 	int cont = 0; //Contagem de pontos do seno_tabela considerados
 	for (i=0;i<qtd_pontos;i++)
  80003f4:	f10d 34ff 	add.w	r4, sp, #4294967295	; 0xffffffff
- 80003f8:	f10d 0a0f 	add.w	sl, sp, #15
+ 80003f8:	f10d 0a3f 	add.w	sl, sp, #63	; 0x3f
 	{
 		seno_tabela[i] = floatToChar(sin(M_2PI*i/qtd_pontos));
- 80003fc:	ab04      	add	r3, sp, #16
- 80003fe:	f1c3 0511 	rsb	r5, r3, #17
+ 80003fc:	ab10      	add	r3, sp, #64	; 0x40
+ 80003fe:	f1c3 0541 	rsb	r5, r3, #65	; 0x41
  8000402:	f20f 09ac 	addw	r9, pc, #172	; 0xac
  8000406:	e9d9 8900 	ldrd	r8, r9, [r9]
  800040a:	2600      	movs	r6, #0
@@ -467,7 +467,7 @@ int main(void)
  800045c:	f44f 5800 	mov.w	r8, #8192	; 0x2000
  8000460:	e00c      	b.n	800047c <main+0xa4>
 			if (cont==qtd_pontos) // Se o tempo atual for igual ao período, o seno se repete
- 8000462:	2e10      	cmp	r6, #16
+ 8000462:	2e40      	cmp	r6, #64	; 0x40
 				cont = 0;
  8000464:	bf04      	itt	eq
  8000466:	2600      	moveq	r6, #0
@@ -503,20 +503,20 @@ int main(void)
  800049e:	2800      	cmp	r0, #0
  80004a0:	d1df      	bne.n	8000462 <main+0x8a>
 				saida_char = seno_tabela[cont];
- 80004a2:	ab04      	add	r3, sp, #16
+ 80004a2:	ab10      	add	r3, sp, #64	; 0x40
  80004a4:	4433      	add	r3, r6
- 80004a6:	f813 7c10 	ldrb.w	r7, [r3, #-16]
+ 80004a6:	f813 7c40 	ldrb.w	r7, [r3, #-64]
 				cont++;
  80004aa:	3601      	adds	r6, #1
  80004ac:	e7d9      	b.n	8000462 <main+0x8a>
  80004ae:	bf00      	nop
  80004b0:	54442eea 	.word	0x54442eea
  80004b4:	401921fb 	.word	0x401921fb
- 80004b8:	3fb00000 	.word	0x3fb00000
+ 80004b8:	3f900000 	.word	0x3f900000
  80004bc:	40011000 	.word	0x40011000
  80004c0:	2000000c 	.word	0x2000000c
  80004c4:	41480000 	.word	0x41480000
- 80004c8:	41400000 	.word	0x41400000
+ 80004c8:	431c0000 	.word	0x431c0000
 
 080004cc <sys_tick_handler_v>:
 static void systick_config(uint32_t ticks);

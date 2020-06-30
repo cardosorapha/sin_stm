@@ -1124,18 +1124,18 @@ LOAD linker stubs
  .debug_info    0x000000000000438c      0x251 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(nvic.o)
  .debug_info    0x00000000000045dd       0xfc /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(flash_common_all.o)
 
-.debug_abbrev   0x0000000000000000      0xf9b
- .debug_abbrev  0x0000000000000000      0x1bb ./objs/dac_tim.o
- .debug_abbrev  0x00000000000001bb      0x1f0 ./objs/time_stm32.o
- .debug_abbrev  0x00000000000003ab       0xd0 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(gpio.o)
- .debug_abbrev  0x000000000000047b      0x116 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(gpio_common_all.o)
- .debug_abbrev  0x0000000000000591      0x2e4 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc.o)
- .debug_abbrev  0x0000000000000875      0x158 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc_common_all.o)
- .debug_abbrev  0x00000000000009cd      0x1b4 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(timer_common_all.o)
- .debug_abbrev  0x0000000000000b81      0x176 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(vector.o)
- .debug_abbrev  0x0000000000000cf7      0x155 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(systick.o)
- .debug_abbrev  0x0000000000000e4c       0xb5 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(nvic.o)
- .debug_abbrev  0x0000000000000f01       0x9a /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(flash_common_all.o)
+.debug_abbrev   0x0000000000000000      0xf8a
+ .debug_abbrev  0x0000000000000000      0x1aa ./objs/dac_tim.o
+ .debug_abbrev  0x00000000000001aa      0x1f0 ./objs/time_stm32.o
+ .debug_abbrev  0x000000000000039a       0xd0 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(gpio.o)
+ .debug_abbrev  0x000000000000046a      0x116 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(gpio_common_all.o)
+ .debug_abbrev  0x0000000000000580      0x2e4 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc.o)
+ .debug_abbrev  0x0000000000000864      0x158 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc_common_all.o)
+ .debug_abbrev  0x00000000000009bc      0x1b4 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(timer_common_all.o)
+ .debug_abbrev  0x0000000000000b70      0x176 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(vector.o)
+ .debug_abbrev  0x0000000000000ce6      0x155 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(systick.o)
+ .debug_abbrev  0x0000000000000e3b       0xb5 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(nvic.o)
+ .debug_abbrev  0x0000000000000ef0       0x9a /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(flash_common_all.o)
 
 .debug_loc      0x0000000000000000     0x1458
  .debug_loc     0x0000000000000000      0x1c7 ./objs/dac_tim.o

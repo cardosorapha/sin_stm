@@ -160,10 +160,10 @@ int main(void)
 	//uint16_t T_count = 0; //Contador de quantos períodos já passaram	
 	float t = 0; //Tempo atual 
 	uint8_t saida_char = (uint8_t)0; //Valor do seno após conversão de float pra inteiro
-	int qtd_pontos = 16;
+	int qtd_pontos = 64;
 	char seno_tabela[qtd_pontos];
 	int i;
-	uint16_t freq_alvo = 5000;
+	uint16_t freq_alvo = 100;
 	float T_incremento = 1000000/(qtd_pontos*freq_alvo); // Em us
 	int cont = 0; //Contagem de pontos do seno_tabela considerados
 	for (i=0;i<qtd_pontos;i++)

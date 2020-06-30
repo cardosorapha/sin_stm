@@ -79,7 +79,7 @@ void gpio_setup(void) {
 }
 void tim2_setup(void){
 	
-	//Configurado para 20KHz de frequência de atualização - 50us de taxa de amostragem	
+	//Configurado para 80kHz de frequência de atualização - 12.5us de taxa de amostragem	
 
 	rcc_periph_clock_enable(RCC_TIM2);
 	timer_set_mode(TIM2, TIM_CR1_CKD_CK_INT, TIM_CR1_CMS_EDGE, TIM_CR1_DIR_UP);
@@ -98,7 +98,7 @@ void tim2_setup(void){
 
 uint8_t floatToChar(float sinFloat)
 {
-	//sinFloat entra aqui entre -1 e 1
+	//sinFloat entra aqui entre -1 e 1 e sai entre 0 e 255
 	uint8_t out = (uint8_t)(255*(sinFloat+1)/2);
 	return out;
 }
@@ -183,11 +183,7 @@ int main(void)
 			i = i+1; //Incremento de um tick
 			t = t+12.5; //Incremento de um tick em us
 			//saida_seno = sin(M_2PI*t/((float)T));
-			if (t<cont*T_incremento)
-			{
-				//Nada acontece
-			}
-			else
+			if (t>=cont*T_incremento)
 			{
 				saida_char = seno_tabela[cont];
 				cont++;

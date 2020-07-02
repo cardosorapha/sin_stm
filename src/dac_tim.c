@@ -34,6 +34,7 @@ void gpio_setup(void);
 void tim2_setup(void);
 uint8_t floatToChar(float);
 void updateOutput(uint8_t);
+float calculaIncremento(uint16_t,uint8_t);
 
 void tim2_isr(void)
 {
@@ -79,7 +80,7 @@ void gpio_setup(void) {
 }
 void tim2_setup(void){
 	
-	//Configurado para 80kHz de frequência de atualização - 12.5us de taxa de amostragem	
+	//Configurado para 80 de frequência de atualização - 12.5us de taxa de amostragem	
 
 	rcc_periph_clock_enable(RCC_TIM2);
 	timer_set_mode(TIM2, TIM_CR1_CKD_CK_INT, TIM_CR1_CMS_EDGE, TIM_CR1_DIR_UP);
@@ -148,6 +149,12 @@ void updateOutput(uint8_t sinChar)
 
 }
 
+float calculaIncremento(uint16_t freq,uint8_t pontos)
+{
+	return 1000000/(pontos*freq); // Em us
+}
+
+
 int main(void)
 {
 	rcc_clock_setup_in_hse_8mhz_out_72mhz(); 
@@ -156,17 +163,27 @@ int main(void)
 	tim2_setup();
 	time_init(); //Pra usar a biblioteca de delays
 	delay_ms(20);
-	
-	//uint16_t T_count = 0; //Contador de quantos períodos já passaram	
-	float t = 0; //Tempo atual 
+
+
+	/* Parâmetros gerais não configuráveis */	
 	uint8_t saida_char = (uint8_t)0; //Valor do seno após conversão de float pra inteiro
-	int qtd_pontos = 64;
+	uint8_t qtd_pontos = 64;
 	char seno_tabela[qtd_pontos];
-	int i;
-	uint16_t freq_alvo = 100;
-	float T_incremento = 1000000/(qtd_pontos*freq_alvo); // Em us
+	uint8_t t_ms_att_f = 100; //Tempo em ms de atualização das frequências
+
+	/* Parâmetros do experimento configuráveis externamente */
+	uint16_t freq_inicial = 30;
+	uint16_t freq_final = 1000;
+	uint16_t T_experimento = 5000; //Em ms
+
+	/* Consequência da modificação dos parâmetros externos */
+	uint16_t f_incremento = (uint16_t)(t_ms_att_f*(freq_final-freq_inicial)/T_experimento);
+	int dir = 1; //Direção de mudança da frequência
+
+
+	int i; //Iterador para gerar o seno
 	int cont = 0; //Contagem de pontos do seno_tabela considerados
-	for (i=0;i<qtd_pontos;i++)
+	for (i=0;i<qtd_pontos;i++) //Gerando o seno - so precisa ocorrer uma vez
 	{
 		seno_tabela[i] = floatToChar(sin(M_2PI*i/qtd_pontos));
 	}
@@ -175,15 +192,22 @@ int main(void)
 
 	gpio_clear(GPIOC,GPIO13);
 
+	/* Parâmetros que mudam automaticamente */
+	uint16_t freq_alvo = freq_inicial;
+	float T_incremento = calculaIncremento(freq_alvo,qtd_pontos);
+	float t_us= 0; //Tempo atual em us
+	float t_ms = 0; //Tempo atual em ms
+
+
+	/* Começo do programa */
 	delay_ms(10);
 	while(1)
 	{
 		if (flag_amostra == 1) //Bateu o timer de amostra, atualizo o valor do seno
 		{
 			i = i+1; //Incremento de um tick
-			t = t+12.5; //Incremento de um tick em us
-			//saida_seno = sin(M_2PI*t/((float)T));
-			if (t>=cont*T_incremento)
+			t_us = t_us+12.5; //Incremento de um tick em us
+			if (t_us>=cont*T_incremento) // Se for hora de atualizar o seno, procura novo valor. se nao repete o mesmo
 			{
 				saida_char = seno_tabela[cont];
 				cont++;
@@ -191,17 +215,35 @@ int main(void)
 
 			if (cont==qtd_pontos) // Se o tempo atual for igual ao período, o seno se repete
 			{
-				t = 0;
+				t_ms = t_ms+64*T_incremento/1000; //Incremento o tempo atual em ms
+
+				if (t_ms>=t_ms_att_f)
+				{
+					freq_alvo = freq_alvo + dir * f_incremento;
+					if (freq_alvo>freq_final)
+					{
+						dir = -1;
+						freq_alvo = freq_final;
+					}
+					else if(freq_alvo<freq_inicial)
+					{
+						dir = 1;
+						freq_alvo = freq_inicial;
+					}
+
+					T_incremento = calculaIncremento(freq_alvo,qtd_pontos);
+					t_ms = 0;
+				}
+				t_us = 0;
 				cont = 0;
 				i = 0;
 			}		
-
 
 			/* Saída pro conversor D/A */
 			updateOutput(saida_char);
 			gpio_toggle(GPIOC, GPIO13);
 
-			flag_amostra = 0; //Resetando o valor
+			flag_amostra = 0; //Fim da amostragem
 		}
 	}
 	return 0;

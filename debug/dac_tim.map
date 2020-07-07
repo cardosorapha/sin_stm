@@ -1,33 +1,7 @@
 Archive member included to satisfy reference by file (symbol)
 
-/usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_sin.o)
-                              ./objs/dac_tim.o (sin)
-/usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-e_rem_pio2.o)
-                              /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_sin.o) (__ieee754_rem_pio2)
-/usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-k_cos.o)
-                              /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_sin.o) (__kernel_cos)
-/usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-k_rem_pio2.o)
-                              /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-e_rem_pio2.o) (__kernel_rem_pio2)
-/usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-k_sin.o)
-                              /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_sin.o) (__kernel_sin)
-/usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_fabs.o)
-                              /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-e_rem_pio2.o) (fabs)
-/usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_floor.o)
-                              /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-k_rem_pio2.o) (floor)
-/usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_scalbn.o)
-                              /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-k_rem_pio2.o) (scalbn)
-/usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_muldf3.o)
-                              ./objs/dac_tim.o (__aeabi_dmul)
 /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_mulsf3.o)
                               ./objs/dac_tim.o (__aeabi_fmul)
-/usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_addsubdf3.o)
-                              /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_sin.o) (__aeabi_dsub)
-/usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_cmpdf2.o)
-                              /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-e_rem_pio2.o) (__aeabi_dcmpeq)
-/usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_fixdfsi.o)
-                              /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-e_rem_pio2.o) (__aeabi_d2iz)
-/usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_truncdfsf2.o)
-                              ./objs/dac_tim.o (__aeabi_d2f)
 /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_addsubsf3.o)
                               ./objs/dac_tim.o (__aeabi_fadd)
 /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_muldivsf3.o)
@@ -62,6 +36,8 @@ Discarded input sections
  .text          0x0000000000000000        0x0 ./objs/dac_tim.o
  .data          0x0000000000000000        0x0 ./objs/dac_tim.o
  .bss           0x0000000000000000        0x0 ./objs/dac_tim.o
+ .text.floatToChar
+                0x0000000000000000       0x24 ./objs/dac_tim.o
  .text.calculaIncremento
                 0x0000000000000000       0x18 ./objs/dac_tim.o
  .bss.milliseconds
@@ -71,54 +47,24 @@ Discarded input sections
  .bss           0x0000000000000000        0x0 ./objs/time_stm32.o
  .text.delay_us
                 0x0000000000000000       0x54 ./objs/time_stm32.o
- .text          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_sin.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_sin.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_sin.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-e_rem_pio2.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-e_rem_pio2.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-e_rem_pio2.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-k_cos.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-k_cos.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-k_cos.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-k_rem_pio2.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-k_rem_pio2.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-k_rem_pio2.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-k_sin.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-k_sin.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-k_sin.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_fabs.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_fabs.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_fabs.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_floor.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_floor.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_floor.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_scalbn.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_scalbn.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_scalbn.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_muldf3.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_muldf3.o)
  .text          0x0000000000000000      0x168 /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_mulsf3.o)
  .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_mulsf3.o)
  .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_mulsf3.o)
  .debug_frame   0x0000000000000000       0x24 /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_mulsf3.o)
  .ARM.attributes
                 0x0000000000000000       0x1d /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_mulsf3.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_addsubdf3.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_addsubdf3.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_cmpdf2.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_cmpdf2.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_fixdfsi.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_fixdfsi.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_truncdfsf2.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_truncdfsf2.o)
  .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_addsubsf3.o)
  .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_addsubsf3.o)
  .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_muldivsf3.o)
  .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_muldivsf3.o)
  .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_cmpsf2.o)
  .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_cmpsf2.o)
+ .text          0x0000000000000000       0x40 /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_fixunssfsi.o)
  .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_fixunssfsi.o)
  .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_fixunssfsi.o)
+ .debug_frame   0x0000000000000000       0x24 /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_fixunssfsi.o)
+ .ARM.attributes
+                0x0000000000000000       0x1d /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_fixunssfsi.o)
  .group         0x0000000000000000        0xc /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(gpio.o)
  .group         0x0000000000000000        0xc /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(gpio.o)
  .group         0x0000000000000000        0xc /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(gpio.o)
@@ -398,8 +344,6 @@ Discarded input sections
                 0x0000000000000000       0x34 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(timer_common_all.o)
  .text.timer_set_oc_slow_mode
                 0x0000000000000000       0x34 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(timer_common_all.o)
- .text.timer_set_oc_mode
-                0x0000000000000000      0x18c /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(timer_common_all.o)
  .text.timer_enable_oc_preload
                 0x0000000000000000       0x34 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(timer_common_all.o)
  .text.timer_disable_oc_preload
@@ -407,8 +351,6 @@ Discarded input sections
  .text.timer_set_oc_polarity_high
                 0x0000000000000000       0x4a /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(timer_common_all.o)
  .text.timer_set_oc_polarity_low
-                0x0000000000000000       0x4a /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(timer_common_all.o)
- .text.timer_enable_oc_output
                 0x0000000000000000       0x4a /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(timer_common_all.o)
  .text.timer_disable_oc_output
                 0x0000000000000000       0x4a /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(timer_common_all.o)
@@ -701,7 +643,7 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/
 LOAD /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libnosys.a
 END GROUP
 
-.text           0x0000000008000000     0x2c70
+.text           0x0000000008000000      0xfa0
  *(.vectors)
  .vectors       0x0000000008000000      0x150 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(vector.o)
                 0x0000000008000000                vector_table
@@ -710,381 +652,311 @@ END GROUP
                 0x0000000008000150       0x24 ./objs/dac_tim.o
                 0x0000000008000150                tim2_isr
  .text.gpio_setup
-                0x0000000008000174       0xfc ./objs/dac_tim.o
+                0x0000000008000174       0x58 ./objs/dac_tim.o
                 0x0000000008000174                gpio_setup
  .text.tim2_setup
-                0x0000000008000270       0x5a ./objs/dac_tim.o
-                0x0000000008000270                tim2_setup
- *fill*         0x00000000080002ca        0x2 
- .text.floatToChar
-                0x00000000080002cc       0x24 ./objs/dac_tim.o
-                0x00000000080002cc                floatToChar
- .text.updateOutput
-                0x00000000080002f0       0xe8 ./objs/dac_tim.o
-                0x00000000080002f0                updateOutput
- .text.main     0x00000000080003d8      0x168 ./objs/dac_tim.o
-                0x00000000080003d8                main
- .text.__empty  0x0000000008000540        0x2 ./objs/time_stm32.o
-                0x0000000008000540                sys_tick_handler_v
- *fill*         0x0000000008000542        0x2 
+                0x00000000080001cc       0x5a ./objs/dac_tim.o
+                0x00000000080001cc                tim2_setup
+ *fill*         0x0000000008000226        0x2 
+ .text.tim4_setup
+                0x0000000008000228       0x6c ./objs/dac_tim.o
+                0x0000000008000228                tim4_setup
+ .text.main     0x0000000008000294      0x110 ./objs/dac_tim.o
+                0x0000000008000294                main
+ .text.__empty  0x00000000080003a4        0x2 ./objs/time_stm32.o
+                0x00000000080003a4                sys_tick_handler_v
+ *fill*         0x00000000080003a6        0x2 
  .text.delay_ms
-                0x0000000008000544       0x14 ./objs/time_stm32.o
-                0x0000000008000544                delay_ms
+                0x00000000080003a8       0x14 ./objs/time_stm32.o
+                0x00000000080003a8                delay_ms
  .text.time_init
-                0x0000000008000558       0x30 ./objs/time_stm32.o
-                0x0000000008000558                time_init
+                0x00000000080003bc       0x30 ./objs/time_stm32.o
+                0x00000000080003bc                time_init
  .text.sys_tick_handler
-                0x0000000008000588       0x14 ./objs/time_stm32.o
-                0x0000000008000588                sys_tick_handler
- .text.sin      0x000000000800059c       0xac /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_sin.o)
-                0x000000000800059c                sin
- .text.__ieee754_rem_pio2
-                0x0000000008000648      0x44c /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-e_rem_pio2.o)
-                0x0000000008000648                __ieee754_rem_pio2
- *fill*         0x0000000008000a94        0x4 
- .text.__kernel_cos
-                0x0000000008000a98      0x250 /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-k_cos.o)
-                0x0000000008000a98                __kernel_cos
- .text.__kernel_rem_pio2
-                0x0000000008000ce8      0x85c /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-k_rem_pio2.o)
-                0x0000000008000ce8                __kernel_rem_pio2
- *fill*         0x0000000008001544        0x4 
- .text.__kernel_sin
-                0x0000000008001548      0x184 /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-k_sin.o)
-                0x0000000008001548                __kernel_sin
- .text.fabs     0x00000000080016cc        0x8 /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_fabs.o)
-                0x00000000080016cc                fabs
- *fill*         0x00000000080016d4        0x4 
- .text.floor    0x00000000080016d8       0xf8 /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_floor.o)
-                0x00000000080016d8                floor
- .text.scalbn   0x00000000080017d0       0xf4 /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_scalbn.o)
-                0x00000000080017d0                scalbn
- .text          0x00000000080018c4      0x254 /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_muldf3.o)
-                0x00000000080018c4                __aeabi_dmul
-                0x00000000080018c4                __muldf3
- .text          0x0000000008001b18      0x378 /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_addsubdf3.o)
-                0x0000000008001b18                __aeabi_drsub
-                0x0000000008001b20                __aeabi_dsub
-                0x0000000008001b20                __subdf3
-                0x0000000008001b24                __adddf3
-                0x0000000008001b24                __aeabi_dadd
-                0x0000000008001d9c                __aeabi_ui2d
-                0x0000000008001d9c                __floatunsidf
-                0x0000000008001dbc                __floatsidf
-                0x0000000008001dbc                __aeabi_i2d
-                0x0000000008001de0                __extendsfdf2
-                0x0000000008001de0                __aeabi_f2d
-                0x0000000008001e24                __aeabi_ul2d
-                0x0000000008001e24                __floatundidf
-                0x0000000008001e34                __floatdidf
-                0x0000000008001e34                __aeabi_l2d
- .text          0x0000000008001e90      0x110 /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_cmpdf2.o)
-                0x0000000008001e90                __gtdf2
-                0x0000000008001e90                __gedf2
-                0x0000000008001e98                __ltdf2
-                0x0000000008001e98                __ledf2
-                0x0000000008001ea0                __cmpdf2
-                0x0000000008001ea0                __eqdf2
-                0x0000000008001ea0                __nedf2
-                0x0000000008001f1c                __aeabi_cdrcmple
-                0x0000000008001f2c                __aeabi_cdcmple
-                0x0000000008001f2c                __aeabi_cdcmpeq
-                0x0000000008001f3c                __aeabi_dcmpeq
-                0x0000000008001f50                __aeabi_dcmplt
-                0x0000000008001f64                __aeabi_dcmple
-                0x0000000008001f78                __aeabi_dcmpge
-                0x0000000008001f8c                __aeabi_dcmpgt
- .text          0x0000000008001fa0       0x50 /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_fixdfsi.o)
-                0x0000000008001fa0                __fixdfsi
-                0x0000000008001fa0                __aeabi_d2iz
- .text          0x0000000008001ff0       0xa0 /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_truncdfsf2.o)
-                0x0000000008001ff0                __aeabi_d2f
-                0x0000000008001ff0                __truncdfsf2
- .text          0x0000000008002090      0x21c /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_addsubsf3.o)
-                0x0000000008002090                __aeabi_frsub
-                0x0000000008002098                __subsf3
-                0x0000000008002098                __aeabi_fsub
-                0x000000000800209c                __aeabi_fadd
-                0x000000000800209c                __addsf3
-                0x00000000080021fc                __aeabi_ui2f
-                0x00000000080021fc                __floatunsisf
-                0x0000000008002204                __aeabi_i2f
-                0x0000000008002204                __floatsisf
-                0x0000000008002220                __floatundisf
-                0x0000000008002220                __aeabi_ul2f
-                0x0000000008002230                __floatdisf
-                0x0000000008002230                __aeabi_l2f
- .text          0x00000000080022ac      0x2a0 /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_muldivsf3.o)
-                0x00000000080022ac                __mulsf3
-                0x00000000080022ac                __aeabi_fmul
-                0x0000000008002414                __divsf3
-                0x0000000008002414                __aeabi_fdiv
- .text          0x000000000800254c       0xec /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_cmpsf2.o)
-                0x000000000800254c                __gtsf2
-                0x000000000800254c                __gesf2
-                0x0000000008002554                __lesf2
-                0x0000000008002554                __ltsf2
-                0x000000000800255c                __nesf2
-                0x000000000800255c                __eqsf2
-                0x000000000800255c                __cmpsf2
-                0x00000000080025bc                __aeabi_cfrcmple
-                0x00000000080025c4                __aeabi_cfcmple
-                0x00000000080025c4                __aeabi_cfcmpeq
-                0x00000000080025d4                __aeabi_fcmpeq
-                0x00000000080025e8                __aeabi_fcmplt
-                0x00000000080025fc                __aeabi_fcmple
-                0x0000000008002610                __aeabi_fcmpge
-                0x0000000008002624                __aeabi_fcmpgt
- .text          0x0000000008002638       0x40 /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_fixunssfsi.o)
-                0x0000000008002638                __aeabi_f2uiz
-                0x0000000008002638                __fixunssfsi
+                0x00000000080003ec       0x14 ./objs/time_stm32.o
+                0x00000000080003ec                sys_tick_handler
+ .text          0x0000000008000400      0x21c /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_addsubsf3.o)
+                0x0000000008000400                __aeabi_frsub
+                0x0000000008000408                __subsf3
+                0x0000000008000408                __aeabi_fsub
+                0x000000000800040c                __aeabi_fadd
+                0x000000000800040c                __addsf3
+                0x000000000800056c                __aeabi_ui2f
+                0x000000000800056c                __floatunsisf
+                0x0000000008000574                __aeabi_i2f
+                0x0000000008000574                __floatsisf
+                0x0000000008000590                __floatundisf
+                0x0000000008000590                __aeabi_ul2f
+                0x00000000080005a0                __floatdisf
+                0x00000000080005a0                __aeabi_l2f
+ .text          0x000000000800061c      0x2a0 /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_muldivsf3.o)
+                0x000000000800061c                __mulsf3
+                0x000000000800061c                __aeabi_fmul
+                0x0000000008000784                __divsf3
+                0x0000000008000784                __aeabi_fdiv
+ .text          0x00000000080008bc       0xec /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_cmpsf2.o)
+                0x00000000080008bc                __gtsf2
+                0x00000000080008bc                __gesf2
+                0x00000000080008c4                __lesf2
+                0x00000000080008c4                __ltsf2
+                0x00000000080008cc                __nesf2
+                0x00000000080008cc                __eqsf2
+                0x00000000080008cc                __cmpsf2
+                0x000000000800092c                __aeabi_cfrcmple
+                0x0000000008000934                __aeabi_cfcmple
+                0x0000000008000934                __aeabi_cfcmpeq
+                0x0000000008000944                __aeabi_fcmpeq
+                0x0000000008000958                __aeabi_fcmplt
+                0x000000000800096c                __aeabi_fcmple
+                0x0000000008000980                __aeabi_fcmpge
+                0x0000000008000994                __aeabi_fcmpgt
  .text.gpio_set_mode
-                0x0000000008002678       0x5e /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(gpio.o)
-                0x0000000008002678                gpio_set_mode
+                0x00000000080009a8       0x5e /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(gpio.o)
+                0x00000000080009a8                gpio_set_mode
  .text.gpio_set
-                0x00000000080026d6        0x4 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(gpio_common_all.o)
-                0x00000000080026d6                gpio_set
+                0x0000000008000a06        0x4 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(gpio_common_all.o)
+                0x0000000008000a06                gpio_set
  .text.gpio_clear
-                0x00000000080026da        0x6 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(gpio_common_all.o)
-                0x00000000080026da                gpio_clear
+                0x0000000008000a0a        0x6 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(gpio_common_all.o)
+                0x0000000008000a0a                gpio_clear
  .text.gpio_toggle
-                0x00000000080026e0       0x12 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(gpio_common_all.o)
-                0x00000000080026e0                gpio_toggle
- *fill*         0x00000000080026f2        0x2 
+                0x0000000008000a10       0x12 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(gpio_common_all.o)
+                0x0000000008000a10                gpio_toggle
+ *fill*         0x0000000008000a22        0x2 
  .text.rcc_osc_on.part.1
-                0x00000000080026f4       0x10 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc.o)
+                0x0000000008000a24       0x10 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc.o)
  .text.rcc_is_osc_ready
-                0x0000000008002704       0x5c /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc.o)
-                0x0000000008002704                rcc_is_osc_ready
+                0x0000000008000a34       0x5c /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc.o)
+                0x0000000008000a34                rcc_is_osc_ready
  .text.rcc_wait_for_osc_ready
-                0x0000000008002760       0x10 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc.o)
-                0x0000000008002760                rcc_wait_for_osc_ready
+                0x0000000008000a90       0x10 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc.o)
+                0x0000000008000a90                rcc_wait_for_osc_ready
  .text.rcc_osc_on
-                0x0000000008002770       0x54 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc.o)
-                0x0000000008002770                rcc_osc_on
+                0x0000000008000aa0       0x54 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc.o)
+                0x0000000008000aa0                rcc_osc_on
  .text.rcc_set_sysclk_source
-                0x00000000080027c4       0x14 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc.o)
-                0x00000000080027c4                rcc_set_sysclk_source
+                0x0000000008000af4       0x14 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc.o)
+                0x0000000008000af4                rcc_set_sysclk_source
  .text.rcc_set_pll_multiplication_factor
-                0x00000000080027d8       0x14 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc.o)
-                0x00000000080027d8                rcc_set_pll_multiplication_factor
+                0x0000000008000b08       0x14 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc.o)
+                0x0000000008000b08                rcc_set_pll_multiplication_factor
  .text.rcc_set_pll_source
-                0x00000000080027ec       0x14 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc.o)
-                0x00000000080027ec                rcc_set_pll_source
+                0x0000000008000b1c       0x14 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc.o)
+                0x0000000008000b1c                rcc_set_pll_source
  .text.rcc_set_pllxtpre
-                0x0000000008002800       0x14 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc.o)
-                0x0000000008002800                rcc_set_pllxtpre
+                0x0000000008000b30       0x14 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc.o)
+                0x0000000008000b30                rcc_set_pllxtpre
  .text.rcc_set_adcpre
-                0x0000000008002814       0x14 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc.o)
-                0x0000000008002814                rcc_set_adcpre
+                0x0000000008000b44       0x14 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc.o)
+                0x0000000008000b44                rcc_set_adcpre
  .text.rcc_set_ppre2
-                0x0000000008002828       0x14 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc.o)
-                0x0000000008002828                rcc_set_ppre2
+                0x0000000008000b58       0x14 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc.o)
+                0x0000000008000b58                rcc_set_ppre2
  .text.rcc_set_ppre1
-                0x000000000800283c       0x14 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc.o)
-                0x000000000800283c                rcc_set_ppre1
+                0x0000000008000b6c       0x14 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc.o)
+                0x0000000008000b6c                rcc_set_ppre1
  .text.rcc_set_hpre
-                0x0000000008002850       0x14 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc.o)
-                0x0000000008002850                rcc_set_hpre
+                0x0000000008000b80       0x14 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc.o)
+                0x0000000008000b80                rcc_set_hpre
  .text.rcc_clock_setup_in_hse_8mhz_out_72mhz
-                0x0000000008002864       0x8c /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc.o)
-                0x0000000008002864                rcc_clock_setup_in_hse_8mhz_out_72mhz
+                0x0000000008000b94       0x8c /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc.o)
+                0x0000000008000b94                rcc_clock_setup_in_hse_8mhz_out_72mhz
  .text.rcc_periph_clock_enable
-                0x00000000080028f0       0x1a /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc_common_all.o)
-                0x00000000080028f0                rcc_periph_clock_enable
+                0x0000000008000c20       0x1a /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc_common_all.o)
+                0x0000000008000c20                rcc_periph_clock_enable
  .text.timer_enable_irq
-                0x000000000800290a        0x8 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(timer_common_all.o)
-                0x000000000800290a                timer_enable_irq
+                0x0000000008000c3a        0x8 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(timer_common_all.o)
+                0x0000000008000c3a                timer_enable_irq
  .text.timer_clear_flag
-                0x0000000008002912        0x6 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(timer_common_all.o)
-                0x0000000008002912                timer_clear_flag
+                0x0000000008000c42        0x6 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(timer_common_all.o)
+                0x0000000008000c42                timer_clear_flag
  .text.timer_set_mode
-                0x0000000008002918       0x12 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(timer_common_all.o)
-                0x0000000008002918                timer_set_mode
+                0x0000000008000c48       0x12 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(timer_common_all.o)
+                0x0000000008000c48                timer_set_mode
  .text.timer_enable_counter
-                0x000000000800292a        0xa /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(timer_common_all.o)
-                0x000000000800292a                timer_enable_counter
+                0x0000000008000c5a        0xa /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(timer_common_all.o)
+                0x0000000008000c5a                timer_enable_counter
  .text.timer_set_prescaler
-                0x0000000008002934        0x4 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(timer_common_all.o)
-                0x0000000008002934                timer_set_prescaler
+                0x0000000008000c64        0x4 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(timer_common_all.o)
+                0x0000000008000c64                timer_set_prescaler
  .text.timer_set_period
-                0x0000000008002938        0x4 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(timer_common_all.o)
-                0x0000000008002938                timer_set_period
+                0x0000000008000c68        0x4 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(timer_common_all.o)
+                0x0000000008000c68                timer_set_period
+ .text.timer_set_oc_mode
+                0x0000000008000c6c      0x18c /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(timer_common_all.o)
+                0x0000000008000c6c                timer_set_oc_mode
+ .text.timer_enable_oc_output
+                0x0000000008000df8       0x4a /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(timer_common_all.o)
+                0x0000000008000df8                timer_enable_oc_output
  .text.timer_set_oc_value
-                0x000000000800293c       0x20 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(timer_common_all.o)
-                0x000000000800293c                timer_set_oc_value
+                0x0000000008000e42       0x20 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(timer_common_all.o)
+                0x0000000008000e42                timer_set_oc_value
  .text.timer_set_counter
-                0x000000000800295c        0x4 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(timer_common_all.o)
-                0x000000000800295c                timer_set_counter
+                0x0000000008000e62        0x4 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(timer_common_all.o)
+                0x0000000008000e62                timer_set_counter
  .text.blocking_handler
-                0x0000000008002960        0x2 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(vector.o)
-                0x0000000008002960                usart3_isr
-                0x0000000008002960                rtc_isr
-                0x0000000008002960                tim7_isr
-                0x0000000008002960                adc1_2_isr
-                0x0000000008002960                tim1_trg_com_isr
-                0x0000000008002960                usb_hp_can_tx_isr
-                0x0000000008002960                tim6_isr
-                0x0000000008002960                usb_wakeup_isr
-                0x0000000008002960                blocking_handler
-                0x0000000008002960                tim5_isr
-                0x0000000008002960                otg_fs_isr
-                0x0000000008002960                spi1_isr
-                0x0000000008002960                exti2_isr
-                0x0000000008002960                dma1_channel6_isr
-                0x0000000008002960                can_rx1_isr
-                0x0000000008002960                dma1_channel5_isr
-                0x0000000008002960                dma2_channel5_isr
-                0x0000000008002960                usart1_isr
-                0x0000000008002960                usage_fault_handler
-                0x0000000008002960                tim8_trg_com_isr
-                0x0000000008002960                can2_rx0_isr
-                0x0000000008002960                tim1_brk_isr
-                0x0000000008002960                can2_rx1_isr
-                0x0000000008002960                tim1_cc_isr
-                0x0000000008002960                sdio_isr
-                0x0000000008002960                eth_isr
-                0x0000000008002960                dma1_channel4_isr
-                0x0000000008002960                tim8_brk_isr
-                0x0000000008002960                dma2_channel4_5_isr
-                0x0000000008002960                pvd_isr
-                0x0000000008002960                rcc_isr
-                0x0000000008002960                flash_isr
-                0x0000000008002960                uart4_isr
-                0x0000000008002960                rtc_alarm_isr
-                0x0000000008002960                exti15_10_isr
-                0x0000000008002960                hard_fault_handler
-                0x0000000008002960                exti1_isr
-                0x0000000008002960                i2c1_ev_isr
-                0x0000000008002960                dma2_channel1_isr
-                0x0000000008002960                spi2_isr
-                0x0000000008002960                tim8_up_isr
-                0x0000000008002960                dma2_channel2_isr
-                0x0000000008002960                exti3_isr
-                0x0000000008002960                adc3_isr
-                0x0000000008002960                tim3_isr
-                0x0000000008002960                usart2_isr
-                0x0000000008002960                usb_lp_can_rx0_isr
-                0x0000000008002960                i2c2_er_isr
-                0x0000000008002960                i2c2_ev_isr
-                0x0000000008002960                uart5_isr
-                0x0000000008002960                fsmc_isr
-                0x0000000008002960                dma1_channel1_isr
-                0x0000000008002960                exti4_isr
-                0x0000000008002960                mem_manage_handler
-                0x0000000008002960                can2_tx_isr
-                0x0000000008002960                exti9_5_isr
-                0x0000000008002960                dma2_channel3_isr
-                0x0000000008002960                dma1_channel7_isr
-                0x0000000008002960                tim1_up_isr
-                0x0000000008002960                can2_sce_isr
-                0x0000000008002960                tim4_isr
-                0x0000000008002960                dma1_channel2_isr
-                0x0000000008002960                i2c1_er_isr
-                0x0000000008002960                can_sce_isr
-                0x0000000008002960                tim8_cc_isr
-                0x0000000008002960                tamper_isr
-                0x0000000008002960                eth_wkup_isr
-                0x0000000008002960                bus_fault_handler
-                0x0000000008002960                wwdg_isr
-                0x0000000008002960                dma1_channel3_isr
-                0x0000000008002960                spi3_isr
-                0x0000000008002960                exti0_isr
+                0x0000000008000e66        0x2 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(vector.o)
+                0x0000000008000e66                usart3_isr
+                0x0000000008000e66                rtc_isr
+                0x0000000008000e66                tim7_isr
+                0x0000000008000e66                adc1_2_isr
+                0x0000000008000e66                tim1_trg_com_isr
+                0x0000000008000e66                usb_hp_can_tx_isr
+                0x0000000008000e66                tim6_isr
+                0x0000000008000e66                usb_wakeup_isr
+                0x0000000008000e66                blocking_handler
+                0x0000000008000e66                tim5_isr
+                0x0000000008000e66                otg_fs_isr
+                0x0000000008000e66                spi1_isr
+                0x0000000008000e66                exti2_isr
+                0x0000000008000e66                dma1_channel6_isr
+                0x0000000008000e66                can_rx1_isr
+                0x0000000008000e66                dma1_channel5_isr
+                0x0000000008000e66                dma2_channel5_isr
+                0x0000000008000e66                usart1_isr
+                0x0000000008000e66                usage_fault_handler
+                0x0000000008000e66                tim8_trg_com_isr
+                0x0000000008000e66                can2_rx0_isr
+                0x0000000008000e66                tim1_brk_isr
+                0x0000000008000e66                can2_rx1_isr
+                0x0000000008000e66                tim1_cc_isr
+                0x0000000008000e66                sdio_isr
+                0x0000000008000e66                eth_isr
+                0x0000000008000e66                dma1_channel4_isr
+                0x0000000008000e66                tim8_brk_isr
+                0x0000000008000e66                dma2_channel4_5_isr
+                0x0000000008000e66                pvd_isr
+                0x0000000008000e66                rcc_isr
+                0x0000000008000e66                flash_isr
+                0x0000000008000e66                uart4_isr
+                0x0000000008000e66                rtc_alarm_isr
+                0x0000000008000e66                exti15_10_isr
+                0x0000000008000e66                hard_fault_handler
+                0x0000000008000e66                exti1_isr
+                0x0000000008000e66                i2c1_ev_isr
+                0x0000000008000e66                dma2_channel1_isr
+                0x0000000008000e66                spi2_isr
+                0x0000000008000e66                tim8_up_isr
+                0x0000000008000e66                dma2_channel2_isr
+                0x0000000008000e66                exti3_isr
+                0x0000000008000e66                adc3_isr
+                0x0000000008000e66                tim3_isr
+                0x0000000008000e66                usart2_isr
+                0x0000000008000e66                usb_lp_can_rx0_isr
+                0x0000000008000e66                i2c2_er_isr
+                0x0000000008000e66                i2c2_ev_isr
+                0x0000000008000e66                uart5_isr
+                0x0000000008000e66                fsmc_isr
+                0x0000000008000e66                dma1_channel1_isr
+                0x0000000008000e66                exti4_isr
+                0x0000000008000e66                mem_manage_handler
+                0x0000000008000e66                can2_tx_isr
+                0x0000000008000e66                exti9_5_isr
+                0x0000000008000e66                dma2_channel3_isr
+                0x0000000008000e66                dma1_channel7_isr
+                0x0000000008000e66                tim1_up_isr
+                0x0000000008000e66                can2_sce_isr
+                0x0000000008000e66                tim4_isr
+                0x0000000008000e66                dma1_channel2_isr
+                0x0000000008000e66                i2c1_er_isr
+                0x0000000008000e66                can_sce_isr
+                0x0000000008000e66                tim8_cc_isr
+                0x0000000008000e66                tamper_isr
+                0x0000000008000e66                eth_wkup_isr
+                0x0000000008000e66                bus_fault_handler
+                0x0000000008000e66                wwdg_isr
+                0x0000000008000e66                dma1_channel3_isr
+                0x0000000008000e66                spi3_isr
+                0x0000000008000e66                exti0_isr
  .text.null_handler
-                0x0000000008002962        0x2 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(vector.o)
-                0x0000000008002962                null_handler
-                0x0000000008002962                sv_call_handler
-                0x0000000008002962                pend_sv_handler
-                0x0000000008002962                debug_monitor_handler
-                0x0000000008002962                nmi_handler
+                0x0000000008000e68        0x2 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(vector.o)
+                0x0000000008000e68                null_handler
+                0x0000000008000e68                sv_call_handler
+                0x0000000008000e68                pend_sv_handler
+                0x0000000008000e68                debug_monitor_handler
+                0x0000000008000e68                nmi_handler
+ *fill*         0x0000000008000e6a        0x2 
  .text.reset_handler
-                0x0000000008002964       0x90 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(vector.o)
-                0x0000000008002964                reset_handler
+                0x0000000008000e6c       0x90 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(vector.o)
+                0x0000000008000e6c                reset_handler
  .text.systick_set_reload
-                0x00000000080029f4       0x10 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(systick.o)
-                0x00000000080029f4                systick_set_reload
+                0x0000000008000efc       0x10 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(systick.o)
+                0x0000000008000efc                systick_set_reload
  .text.systick_set_clocksource
-                0x0000000008002a04       0x18 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(systick.o)
-                0x0000000008002a04                systick_set_clocksource
+                0x0000000008000f0c       0x18 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(systick.o)
+                0x0000000008000f0c                systick_set_clocksource
  .text.systick_interrupt_enable
-                0x0000000008002a1c       0x10 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(systick.o)
-                0x0000000008002a1c                systick_interrupt_enable
+                0x0000000008000f24       0x10 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(systick.o)
+                0x0000000008000f24                systick_interrupt_enable
  .text.systick_counter_enable
-                0x0000000008002a2c       0x10 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(systick.o)
-                0x0000000008002a2c                systick_counter_enable
+                0x0000000008000f34       0x10 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(systick.o)
+                0x0000000008000f34                systick_counter_enable
  .text.systick_clear
-                0x0000000008002a3c        0xc /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(systick.o)
-                0x0000000008002a3c                systick_clear
+                0x0000000008000f44        0xc /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(systick.o)
+                0x0000000008000f44                systick_clear
  .text.nvic_enable_irq
-                0x0000000008002a48       0x1a /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(nvic.o)
-                0x0000000008002a48                nvic_enable_irq
- *fill*         0x0000000008002a62        0x2 
+                0x0000000008000f50       0x1a /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(nvic.o)
+                0x0000000008000f50                nvic_enable_irq
+ *fill*         0x0000000008000f6a        0x2 
  .text.nvic_set_priority
-                0x0000000008002a64       0x20 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(nvic.o)
-                0x0000000008002a64                nvic_set_priority
+                0x0000000008000f6c       0x20 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(nvic.o)
+                0x0000000008000f6c                nvic_set_priority
  .text.flash_set_ws
-                0x0000000008002a84       0x14 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(flash_common_all.o)
-                0x0000000008002a84                flash_set_ws
-                0x0000000008002a98                . = ALIGN (0x4)
+                0x0000000008000f8c       0x14 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(flash_common_all.o)
+                0x0000000008000f8c                flash_set_ws
+                0x0000000008000fa0                . = ALIGN (0x4)
  *(.rodata*)
- .rodata.npio2_hw
-                0x0000000008002a98       0x80 /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-e_rem_pio2.o)
- .rodata.two_over_pi
-                0x0000000008002b18      0x108 /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-e_rem_pio2.o)
- .rodata.PIo2   0x0000000008002c20       0x40 /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-k_rem_pio2.o)
- .rodata.init_jk
-                0x0000000008002c60       0x10 /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-k_rem_pio2.o)
-                0x0000000008002c70                . = ALIGN (0x4)
+                0x0000000008000fa0                . = ALIGN (0x4)
 
-.glue_7         0x0000000008002c70        0x0
- .glue_7        0x0000000008002c70        0x0 linker stubs
+.glue_7         0x0000000008000fa0        0x0
+ .glue_7        0x0000000008000fa0        0x0 linker stubs
 
-.glue_7t        0x0000000008002c70        0x0
- .glue_7t       0x0000000008002c70        0x0 linker stubs
+.glue_7t        0x0000000008000fa0        0x0
+ .glue_7t       0x0000000008000fa0        0x0 linker stubs
 
-.vfp11_veneer   0x0000000008002c70        0x0
- .vfp11_veneer  0x0000000008002c70        0x0 linker stubs
+.vfp11_veneer   0x0000000008000fa0        0x0
+ .vfp11_veneer  0x0000000008000fa0        0x0 linker stubs
 
-.v4_bx          0x0000000008002c70        0x0
- .v4_bx         0x0000000008002c70        0x0 linker stubs
+.v4_bx          0x0000000008000fa0        0x0
+ .v4_bx         0x0000000008000fa0        0x0 linker stubs
 
-.iplt           0x0000000008002c70        0x0
- .iplt          0x0000000008002c70        0x0 ./objs/dac_tim.o
+.iplt           0x0000000008000fa0        0x0
+ .iplt          0x0000000008000fa0        0x0 ./objs/dac_tim.o
 
-.rel.dyn        0x0000000008002c70        0x0
- .rel.iplt      0x0000000008002c70        0x0 ./objs/dac_tim.o
+.rel.dyn        0x0000000008000fa0        0x0
+ .rel.iplt      0x0000000008000fa0        0x0 ./objs/dac_tim.o
 
-.preinit_array  0x0000000008002c70        0x0
-                0x0000000008002c70                . = ALIGN (0x4)
-                0x0000000008002c70                __preinit_array_start = .
+.preinit_array  0x0000000008000fa0        0x0
+                0x0000000008000fa0                . = ALIGN (0x4)
+                0x0000000008000fa0                __preinit_array_start = .
  *(.preinit_array)
-                0x0000000008002c70                __preinit_array_end = .
+                0x0000000008000fa0                __preinit_array_end = .
 
-.init_array     0x0000000008002c70        0x0
-                0x0000000008002c70                . = ALIGN (0x4)
-                0x0000000008002c70                __init_array_start = .
+.init_array     0x0000000008000fa0        0x0
+                0x0000000008000fa0                . = ALIGN (0x4)
+                0x0000000008000fa0                __init_array_start = .
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array)
-                0x0000000008002c70                __init_array_end = .
+                0x0000000008000fa0                __init_array_end = .
 
-.fini_array     0x0000000008002c70        0x0
-                0x0000000008002c70                . = ALIGN (0x4)
-                0x0000000008002c70                __fini_array_start = .
+.fini_array     0x0000000008000fa0        0x0
+                0x0000000008000fa0                . = ALIGN (0x4)
+                0x0000000008000fa0                __fini_array_start = .
  *(.fini_array)
  *(SORT_BY_NAME(.fini_array.*))
-                0x0000000008002c70                __fini_array_end = .
+                0x0000000008000fa0                __fini_array_end = .
 
 .ARM.extab
  *(.ARM.extab*)
 
-.ARM.exidx      0x0000000008002c70        0x0
-                0x0000000008002c70                __exidx_start = .
+.ARM.exidx      0x0000000008000fa0        0x0
+                0x0000000008000fa0                __exidx_start = .
  *(.ARM.exidx*)
-                0x0000000008002c70                __exidx_end = .
-                0x0000000008002c70                . = ALIGN (0x4)
-                0x0000000008002c70                _etext = .
+                0x0000000008000fa0                __exidx_end = .
+                0x0000000008000fa0                . = ALIGN (0x4)
+                0x0000000008000fa0                _etext = .
 
-.data           0x0000000020000000        0xc load address 0x0000000008002c70
+.data           0x0000000020000000        0xc load address 0x0000000008000fa0
                 0x0000000020000000                _data = .
  *(.data*)
  .data.rcc_ahb_frequency
@@ -1098,12 +970,12 @@ END GROUP
                 0x0000000020000008                rcc_apb2_frequency
                 0x000000002000000c                . = ALIGN (0x4)
                 0x000000002000000c                _edata = .
-                0x0000000008002c70                _data_loadaddr = LOADADDR (.data)
+                0x0000000008000fa0                _data_loadaddr = LOADADDR (.data)
 
-.igot.plt       0x000000002000000c        0x0 load address 0x0000000008002c7c
+.igot.plt       0x000000002000000c        0x0 load address 0x0000000008000fac
  .igot.plt      0x000000002000000c        0x0 ./objs/dac_tim.o
 
-.bss            0x000000002000000c        0x8 load address 0x0000000008002c7c
+.bss            0x000000002000000c        0x8 load address 0x0000000008000fac
  *(.bss*)
  .bss.flag_amostra
                 0x000000002000000c        0x4 ./objs/dac_tim.o
@@ -1122,44 +994,44 @@ END GROUP
 OUTPUT(./build/dac_tim.elf elf32-littlearm)
 LOAD linker stubs
 
-.debug_info     0x0000000000000000     0x4828
- .debug_info    0x0000000000000000      0xd45 ./objs/dac_tim.o
- .debug_info    0x0000000000000d45      0x36e ./objs/time_stm32.o
- .debug_info    0x00000000000010b3      0x216 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(gpio.o)
- .debug_info    0x00000000000012c9      0x266 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(gpio_common_all.o)
- .debug_info    0x000000000000152f     0x128b /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc.o)
- .debug_info    0x00000000000027ba      0x639 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc_common_all.o)
- .debug_info    0x0000000000002df3     0x113e /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(timer_common_all.o)
- .debug_info    0x0000000000003f31      0x32a /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(vector.o)
- .debug_info    0x000000000000425b      0x280 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(systick.o)
- .debug_info    0x00000000000044db      0x251 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(nvic.o)
- .debug_info    0x000000000000472c       0xfc /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(flash_common_all.o)
+.debug_info     0x0000000000000000     0x459d
+ .debug_info    0x0000000000000000      0xaba ./objs/dac_tim.o
+ .debug_info    0x0000000000000aba      0x36e ./objs/time_stm32.o
+ .debug_info    0x0000000000000e28      0x216 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(gpio.o)
+ .debug_info    0x000000000000103e      0x266 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(gpio_common_all.o)
+ .debug_info    0x00000000000012a4     0x128b /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc.o)
+ .debug_info    0x000000000000252f      0x639 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc_common_all.o)
+ .debug_info    0x0000000000002b68     0x113e /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(timer_common_all.o)
+ .debug_info    0x0000000000003ca6      0x32a /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(vector.o)
+ .debug_info    0x0000000000003fd0      0x280 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(systick.o)
+ .debug_info    0x0000000000004250      0x251 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(nvic.o)
+ .debug_info    0x00000000000044a1       0xfc /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(flash_common_all.o)
 
-.debug_abbrev   0x0000000000000000      0xfe6
- .debug_abbrev  0x0000000000000000      0x206 ./objs/dac_tim.o
- .debug_abbrev  0x0000000000000206      0x1f0 ./objs/time_stm32.o
- .debug_abbrev  0x00000000000003f6       0xd0 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(gpio.o)
- .debug_abbrev  0x00000000000004c6      0x116 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(gpio_common_all.o)
- .debug_abbrev  0x00000000000005dc      0x2e4 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc.o)
- .debug_abbrev  0x00000000000008c0      0x158 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc_common_all.o)
- .debug_abbrev  0x0000000000000a18      0x1b4 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(timer_common_all.o)
- .debug_abbrev  0x0000000000000bcc      0x176 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(vector.o)
- .debug_abbrev  0x0000000000000d42      0x155 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(systick.o)
- .debug_abbrev  0x0000000000000e97       0xb5 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(nvic.o)
- .debug_abbrev  0x0000000000000f4c       0x9a /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(flash_common_all.o)
+.debug_abbrev   0x0000000000000000      0xfe2
+ .debug_abbrev  0x0000000000000000      0x202 ./objs/dac_tim.o
+ .debug_abbrev  0x0000000000000202      0x1f0 ./objs/time_stm32.o
+ .debug_abbrev  0x00000000000003f2       0xd0 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(gpio.o)
+ .debug_abbrev  0x00000000000004c2      0x116 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(gpio_common_all.o)
+ .debug_abbrev  0x00000000000005d8      0x2e4 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc.o)
+ .debug_abbrev  0x00000000000008bc      0x158 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc_common_all.o)
+ .debug_abbrev  0x0000000000000a14      0x1b4 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(timer_common_all.o)
+ .debug_abbrev  0x0000000000000bc8      0x176 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(vector.o)
+ .debug_abbrev  0x0000000000000d3e      0x155 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(systick.o)
+ .debug_abbrev  0x0000000000000e93       0xb5 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(nvic.o)
+ .debug_abbrev  0x0000000000000f48       0x9a /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(flash_common_all.o)
 
-.debug_loc      0x0000000000000000     0x15c9
- .debug_loc     0x0000000000000000      0x338 ./objs/dac_tim.o
- .debug_loc     0x0000000000000338      0x11c ./objs/time_stm32.o
- .debug_loc     0x0000000000000454      0x170 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(gpio.o)
- .debug_loc     0x00000000000005c4       0xbe /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(gpio_common_all.o)
- .debug_loc     0x0000000000000682      0x558 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc.o)
- .debug_loc     0x0000000000000bda      0x128 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc_common_all.o)
- .debug_loc     0x0000000000000d02      0x48d /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(timer_common_all.o)
- .debug_loc     0x000000000000118f      0x114 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(vector.o)
- .debug_loc     0x00000000000012a3      0x192 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(systick.o)
- .debug_loc     0x0000000000001435      0x14d /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(nvic.o)
- .debug_loc     0x0000000000001582       0x47 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(flash_common_all.o)
+.debug_loc      0x0000000000000000     0x1575
+ .debug_loc     0x0000000000000000      0x2e4 ./objs/dac_tim.o
+ .debug_loc     0x00000000000002e4      0x11c ./objs/time_stm32.o
+ .debug_loc     0x0000000000000400      0x170 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(gpio.o)
+ .debug_loc     0x0000000000000570       0xbe /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(gpio_common_all.o)
+ .debug_loc     0x000000000000062e      0x558 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc.o)
+ .debug_loc     0x0000000000000b86      0x128 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc_common_all.o)
+ .debug_loc     0x0000000000000cae      0x48d /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(timer_common_all.o)
+ .debug_loc     0x000000000000113b      0x114 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(vector.o)
+ .debug_loc     0x000000000000124f      0x192 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(systick.o)
+ .debug_loc     0x00000000000013e1      0x14d /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(nvic.o)
+ .debug_loc     0x000000000000152e       0x47 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(flash_common_all.o)
 
 .debug_aranges  0x0000000000000000      0x680
  .debug_aranges
@@ -1198,41 +1070,41 @@ LOAD linker stubs
  .debug_ranges  0x0000000000000660       0x50 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(nvic.o)
  .debug_ranges  0x00000000000006b0       0x28 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(flash_common_all.o)
 
-.debug_line     0x0000000000000000     0x3c0e
- .debug_line    0x0000000000000000      0x4cc ./objs/dac_tim.o
- .debug_line    0x00000000000004cc      0x315 ./objs/time_stm32.o
- .debug_line    0x00000000000007e1      0x331 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(gpio.o)
- .debug_line    0x0000000000000b12      0x354 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(gpio_common_all.o)
- .debug_line    0x0000000000000e66      0xc6e /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc.o)
- .debug_line    0x0000000000001ad4      0x3d5 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc_common_all.o)
- .debug_line    0x0000000000001ea9     0x1027 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(timer_common_all.o)
- .debug_line    0x0000000000002ed0      0x382 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(vector.o)
- .debug_line    0x0000000000003252      0x34d /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(systick.o)
- .debug_line    0x000000000000359f      0x36a /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(nvic.o)
- .debug_line    0x0000000000003909      0x305 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(flash_common_all.o)
+.debug_line     0x0000000000000000     0x3b5a
+ .debug_line    0x0000000000000000      0x418 ./objs/dac_tim.o
+ .debug_line    0x0000000000000418      0x315 ./objs/time_stm32.o
+ .debug_line    0x000000000000072d      0x331 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(gpio.o)
+ .debug_line    0x0000000000000a5e      0x354 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(gpio_common_all.o)
+ .debug_line    0x0000000000000db2      0xc6e /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc.o)
+ .debug_line    0x0000000000001a20      0x3d5 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc_common_all.o)
+ .debug_line    0x0000000000001df5     0x1027 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(timer_common_all.o)
+ .debug_line    0x0000000000002e1c      0x382 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(vector.o)
+ .debug_line    0x000000000000319e      0x34d /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(systick.o)
+ .debug_line    0x00000000000034eb      0x36a /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(nvic.o)
+ .debug_line    0x0000000000003855      0x305 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(flash_common_all.o)
 
-.debug_str      0x0000000000000000    0x13a89
- .debug_str     0x0000000000000000      0x658 ./objs/dac_tim.o
-                                        0x707 (size before relaxing)
- .debug_str     0x0000000000000658      0x11c ./objs/time_stm32.o
+.debug_str      0x0000000000000000    0x13a5a
+ .debug_str     0x0000000000000000      0x6db ./objs/dac_tim.o
+                                        0x78a (size before relaxing)
+ .debug_str     0x00000000000006db      0x11c ./objs/time_stm32.o
                                         0x2bf (size before relaxing)
- .debug_str     0x0000000000000774     0x836b /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(gpio.o)
+ .debug_str     0x00000000000007f7     0x836b /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(gpio.o)
                                        0x8513 (size before relaxing)
- .debug_str     0x0000000000008adf       0x60 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(gpio_common_all.o)
+ .debug_str     0x0000000000008b62       0x60 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(gpio_common_all.o)
                                        0x8507 (size before relaxing)
- .debug_str     0x0000000000008b3f     0x30dc /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc.o)
+ .debug_str     0x0000000000008bc2     0x30dc /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc.o)
                                        0x7e06 (size before relaxing)
- .debug_str     0x000000000000bc1b      0x35b /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc_common_all.o)
+ .debug_str     0x000000000000bc9e      0x35b /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc_common_all.o)
                                        0x771c (size before relaxing)
- .debug_str     0x000000000000bf76     0x4a84 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(timer_common_all.o)
+ .debug_str     0x000000000000bff9     0x49d2 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(timer_common_all.o)
                                        0xbcd5 (size before relaxing)
- .debug_str     0x00000000000109fa     0x24f2 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(vector.o)
+ .debug_str     0x00000000000109cb     0x24f2 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(vector.o)
                                        0x6643 (size before relaxing)
- .debug_str     0x0000000000012eec      0x2cb /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(systick.o)
+ .debug_str     0x0000000000012ebd      0x2cb /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(systick.o)
                                        0x44bb (size before relaxing)
- .debug_str     0x00000000000131b7      0x86e /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(nvic.o)
+ .debug_str     0x0000000000013188      0x86e /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(nvic.o)
                                        0x51f8 (size before relaxing)
- .debug_str     0x0000000000013a25       0x64 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(flash_common_all.o)
+ .debug_str     0x00000000000139f6       0x64 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(flash_common_all.o)
                                        0x54df (size before relaxing)
 
 .comment        0x0000000000000000       0x93
@@ -1257,87 +1129,45 @@ LOAD linker stubs
  .ARM.attributes
                 0x000000000000002d       0x2d ./objs/time_stm32.o
  .ARM.attributes
-                0x000000000000005a       0x2d /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_sin.o)
+                0x000000000000005a       0x1d /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_addsubsf3.o)
  .ARM.attributes
-                0x0000000000000087       0x2d /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-e_rem_pio2.o)
+                0x0000000000000077       0x1d /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_muldivsf3.o)
  .ARM.attributes
-                0x00000000000000b4       0x2d /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-k_cos.o)
+                0x0000000000000094       0x1d /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_cmpsf2.o)
  .ARM.attributes
-                0x00000000000000e1       0x2d /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-k_rem_pio2.o)
+                0x00000000000000b1       0x2d /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(gpio.o)
  .ARM.attributes
-                0x000000000000010e       0x2d /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-k_sin.o)
+                0x00000000000000de       0x2d /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(gpio_common_all.o)
  .ARM.attributes
-                0x000000000000013b       0x2d /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_fabs.o)
+                0x000000000000010b       0x2d /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc.o)
  .ARM.attributes
-                0x0000000000000168       0x2d /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_floor.o)
+                0x0000000000000138       0x2d /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc_common_all.o)
  .ARM.attributes
-                0x0000000000000195       0x2d /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_scalbn.o)
+                0x0000000000000165       0x2d /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(timer_common_all.o)
  .ARM.attributes
-                0x00000000000001c2       0x1d /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_muldf3.o)
+                0x0000000000000192       0x2d /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(vector.o)
  .ARM.attributes
-                0x00000000000001df       0x1d /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_addsubdf3.o)
+                0x00000000000001bf       0x2d /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(systick.o)
  .ARM.attributes
-                0x00000000000001fc       0x1d /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_cmpdf2.o)
+                0x00000000000001ec       0x2d /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(nvic.o)
  .ARM.attributes
-                0x0000000000000219       0x1d /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_fixdfsi.o)
- .ARM.attributes
-                0x0000000000000236       0x1d /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_truncdfsf2.o)
- .ARM.attributes
-                0x0000000000000253       0x1d /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_addsubsf3.o)
- .ARM.attributes
-                0x0000000000000270       0x1d /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_muldivsf3.o)
- .ARM.attributes
-                0x000000000000028d       0x1d /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_cmpsf2.o)
- .ARM.attributes
-                0x00000000000002aa       0x1d /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_fixunssfsi.o)
- .ARM.attributes
-                0x00000000000002c7       0x2d /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(gpio.o)
- .ARM.attributes
-                0x00000000000002f4       0x2d /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(gpio_common_all.o)
- .ARM.attributes
-                0x0000000000000321       0x2d /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc.o)
- .ARM.attributes
-                0x000000000000034e       0x2d /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc_common_all.o)
- .ARM.attributes
-                0x000000000000037b       0x2d /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(timer_common_all.o)
- .ARM.attributes
-                0x00000000000003a8       0x2d /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(vector.o)
- .ARM.attributes
-                0x00000000000003d5       0x2d /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(systick.o)
- .ARM.attributes
-                0x0000000000000402       0x2d /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(nvic.o)
- .ARM.attributes
-                0x000000000000042f       0x2d /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(flash_common_all.o)
+                0x0000000000000219       0x2d /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(flash_common_all.o)
 
-.debug_frame    0x0000000000000000     0x120c
- .debug_frame   0x0000000000000000       0xcc ./objs/dac_tim.o
- .debug_frame   0x00000000000000cc       0x84 ./objs/time_stm32.o
- .debug_frame   0x0000000000000150       0x3c /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_sin.o)
- .debug_frame   0x000000000000018c       0x4c /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-e_rem_pio2.o)
- .debug_frame   0x00000000000001d8       0x48 /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-k_cos.o)
- .debug_frame   0x0000000000000220       0x58 /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-k_rem_pio2.o)
- .debug_frame   0x0000000000000278       0x48 /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-k_sin.o)
- .debug_frame   0x00000000000002c0       0x20 /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_fabs.o)
- .debug_frame   0x00000000000002e0       0x30 /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_floor.o)
- .debug_frame   0x0000000000000310       0x30 /usr/lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_scalbn.o)
- .debug_frame   0x0000000000000340       0x30 /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_muldf3.o)
- .debug_frame   0x0000000000000370       0xac /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_addsubdf3.o)
- .debug_frame   0x000000000000041c       0xc4 /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_cmpdf2.o)
- .debug_frame   0x00000000000004e0       0x24 /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_fixdfsi.o)
- .debug_frame   0x0000000000000504       0x24 /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_truncdfsf2.o)
- .debug_frame   0x0000000000000528       0x4c /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_addsubsf3.o)
- .debug_frame   0x0000000000000574       0x38 /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_muldivsf3.o)
- .debug_frame   0x00000000000005ac       0xc8 /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_cmpsf2.o)
- .debug_frame   0x0000000000000674       0x24 /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_fixunssfsi.o)
- .debug_frame   0x0000000000000698       0x60 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(gpio.o)
- .debug_frame   0x00000000000006f8       0x80 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(gpio_common_all.o)
- .debug_frame   0x0000000000000778      0x2e0 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc.o)
- .debug_frame   0x0000000000000a58       0xd0 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc_common_all.o)
- .debug_frame   0x0000000000000b28      0x4d0 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(timer_common_all.o)
- .debug_frame   0x0000000000000ff8       0x4c /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(vector.o)
- .debug_frame   0x0000000000001044       0xd8 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(systick.o)
- .debug_frame   0x000000000000111c       0xa0 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(nvic.o)
- .debug_frame   0x00000000000011bc       0x50 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(flash_common_all.o)
+.debug_frame    0x0000000000000000      0xe0c
+ .debug_frame   0x0000000000000000       0xc8 ./objs/dac_tim.o
+ .debug_frame   0x00000000000000c8       0x84 ./objs/time_stm32.o
+ .debug_frame   0x000000000000014c       0x4c /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_addsubsf3.o)
+ .debug_frame   0x0000000000000198       0x38 /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_muldivsf3.o)
+ .debug_frame   0x00000000000001d0       0xc8 /usr/lib/gcc/arm-none-eabi/10.1.0/thumb/v7-m/nofp/libgcc.a(_arm_cmpsf2.o)
+ .debug_frame   0x0000000000000298       0x60 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(gpio.o)
+ .debug_frame   0x00000000000002f8       0x80 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(gpio_common_all.o)
+ .debug_frame   0x0000000000000378      0x2e0 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc.o)
+ .debug_frame   0x0000000000000658       0xd0 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(rcc_common_all.o)
+ .debug_frame   0x0000000000000728      0x4d0 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(timer_common_all.o)
+ .debug_frame   0x0000000000000bf8       0x4c /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(vector.o)
+ .debug_frame   0x0000000000000c44       0xd8 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(systick.o)
+ .debug_frame   0x0000000000000d1c       0xa0 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(nvic.o)
+ .debug_frame   0x0000000000000dbc       0x50 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(flash_common_all.o)
 
 .debug_macro    0x0000000000000000     0x4858
  .debug_macro   0x0000000000000000       0xb8 /home/rapha/Documents/GPRUFS/STM32_libopencm3_toolchain/libopencm3/lib/libopencm3_stm32f1.a(gpio.o)

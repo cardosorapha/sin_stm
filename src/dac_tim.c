@@ -8,32 +8,12 @@
 
 #define M_2PI 6.28318530718
 
-/* Definições de saída paralela para conversor D/A
-                 DAC0800LCN */
-#define outPin0 GPIO9
-#define outPin1 GPIO10
-#define outPin2 GPIO11
-#define outPin3 GPIO12
-#define outPin4 GPIO6
-#define outPin5 GPIO7
-#define outPin6 GPIO8
-#define outPin7 GPIO9
-
-#define outPort0 GPIOA
-#define outPort1 GPIOA
-#define outPort2 GPIOA
-#define outPort3 GPIOA
-#define outPort4 GPIOB
-#define outPort5 GPIOB
-#define outPort6 GPIOB
-#define outPort7 GPIOB
-
 volatile int flag_amostra = 0;
 
 void gpio_setup(void);
 void tim2_setup(void);
+void tim4_setup(void);
 uint8_t floatToChar(float);
-void updateOutput(uint8_t);
 float calculaIncremento(uint16_t,uint8_t);
 
 void tim2_isr(void)
@@ -57,34 +37,24 @@ void gpio_setup(void) {
 		      GPIO_CNF_OUTPUT_PUSHPULL,GPIO13);
 	gpio_set(GPIOC,GPIO13);
 
-	/* Configurações de saída */
-	gpio_set_mode(outPort0, GPIO_MODE_OUTPUT_2_MHZ, GPIO_CNF_OUTPUT_PUSHPULL, outPin0);
-	gpio_set_mode(outPort1, GPIO_MODE_OUTPUT_2_MHZ, GPIO_CNF_OUTPUT_PUSHPULL, outPin1);
-	gpio_set_mode(outPort2, GPIO_MODE_OUTPUT_2_MHZ, GPIO_CNF_OUTPUT_PUSHPULL, outPin2);
-	gpio_set_mode(outPort3, GPIO_MODE_OUTPUT_2_MHZ, GPIO_CNF_OUTPUT_PUSHPULL, outPin3);
-	gpio_set_mode(outPort4, GPIO_MODE_OUTPUT_2_MHZ, GPIO_CNF_OUTPUT_PUSHPULL, outPin4);
-	gpio_set_mode(outPort5, GPIO_MODE_OUTPUT_2_MHZ, GPIO_CNF_OUTPUT_PUSHPULL, outPin5);
-	gpio_set_mode(outPort6, GPIO_MODE_OUTPUT_2_MHZ, GPIO_CNF_OUTPUT_PUSHPULL, outPin6);
-	gpio_set_mode(outPort7, GPIO_MODE_OUTPUT_2_MHZ, GPIO_CNF_OUTPUT_PUSHPULL, outPin7);
+
+    /***************  Portas dos PWM *******************/
+
+	/* Set GPIOB (in GPIO port B) to 'output alternate function'. */
+	gpio_set_mode(GPIOB,GPIO_MODE_OUTPUT_50_MHZ,
+		      GPIO_CNF_OUTPUT_ALTFN_PUSHPULL,GPIO6);
 	
-	/* Inicializando estado da saída */
-	gpio_set(outPort0, outPin0);
-	gpio_set(outPort1, outPin1);
-	gpio_set(outPort2, outPin2);
-	gpio_set(outPort3, outPin3);
-	gpio_set(outPort4, outPin4);
-	gpio_set(outPort5, outPin5);
-	gpio_set(outPort6, outPin6);
-	gpio_set(outPort7, outPin7);
+	gpio_set_mode(GPIOB,GPIO_MODE_OUTPUT_50_MHZ,
+		      GPIO_CNF_OUTPUT_ALTFN_PUSHPULL,GPIO7);
 
 }
 void tim2_setup(void){
 	
-	//Configurado para 80 de frequência de atualização - 12.5us de taxa de amostragem	
+	//Configurado para 50kHz de frequência de atualização - 20us de taxa de amostragem	
 
 	rcc_periph_clock_enable(RCC_TIM2);
 	timer_set_mode(TIM2, TIM_CR1_CKD_CK_INT, TIM_CR1_CMS_EDGE, TIM_CR1_DIR_UP);
-	timer_set_prescaler(TIM2, 72000000/800000); // frequencia do tick é o denominador
+	timer_set_prescaler(TIM2, 72000000/500000); // frequencia do tick é o denominador
 	timer_set_period(TIM2, 10); // quantos ticks dão um período
 	timer_set_oc_value(TIM2, TIM_OC1, 10); //contagem até o período p/ trigar o interrupt
 	timer_enable_irq(TIM2, TIM_DIER_CC1IE);
@@ -97,56 +67,33 @@ void tim2_setup(void){
 	timer_enable_counter(TIM2);	
 }
 
+
+void tim4_setup(void){ //Timer do PWM
+
+	rcc_periph_clock_enable(RCC_TIM4);
+
+	timer_set_mode(TIM4, TIM_CR1_CKD_CK_INT, TIM_CR1_CMS_EDGE, TIM_CR1_DIR_UP);
+	timer_set_prescaler(TIM4, 72000000/(18900000)); // frequencia do tick é o denominador
+	timer_set_period(TIM4, 126); // quantos ticks dão um período
+
+	timer_set_oc_mode(TIM4,TIM_OC1,TIM_OCM_PWM1); 
+	timer_enable_oc_output(TIM4,TIM_OC1);
+
+	timer_set_oc_mode(TIM4,TIM_OC2,TIM_OCM_PWM2); 
+	timer_enable_oc_output(TIM4,TIM_OC2);
+
+	//Importante: se um PWM tem valor, o outro deve ser zero
+
+	timer_set_oc_value(TIM4, TIM_OC1, 80); //PB6 --tem algo importante aqui
+	timer_set_oc_value(TIM4, TIM_OC2, 127); //PB7
+	timer_enable_counter(TIM4);	
+}
+
 uint8_t floatToChar(float sinFloat)
 {
 	//sinFloat entra aqui entre -1 e 1 e sai entre 0 e 255
 	uint8_t out = (uint8_t)(255*(sinFloat+1)/2);
 	return out;
-}
-
-
-void updateOutput(uint8_t sinChar)
-{
-	if(sinChar&(1<<0))
-		gpio_set(outPort0, outPin0);
-	else	
-		gpio_clear(outPort0, outPin0);
-
-	if(sinChar&(1<<1))
-		gpio_set(outPort1, outPin1);
-	else	
-		gpio_clear(outPort1, outPin1);
-
-	if(sinChar&(1<<2))
-		gpio_set(outPort2, outPin2);
-	else	
-		gpio_clear(outPort2, outPin2);
-
-	if(sinChar&(1<<3))
-		gpio_set(outPort3, outPin3);
-	else	
-		gpio_clear(outPort3, outPin3);
-
-	if(sinChar&(1<<4))
-		gpio_set(outPort4, outPin4);
-	else	
-		gpio_clear(outPort4, outPin4);
-
-	if(sinChar&(1<<5))
-		gpio_set(outPort5, outPin5);
-	else	
-		gpio_clear(outPort5, outPin5);
-
-	if(sinChar&(1<<6))
-		gpio_set(outPort6, outPin6);
-	else	
-		gpio_clear(outPort6, outPin6);
-
-	if(sinChar&(1<<7))
-		gpio_set(outPort7, outPin7);
-	else	
-		gpio_clear(outPort7, outPin7);
-
 }
 
 float calculaIncremento(uint16_t freq,uint8_t pontos)
@@ -161,6 +108,7 @@ int main(void)
 
 	gpio_setup();
 	tim2_setup();
+	tim4_setup();
 	time_init(); //Pra usar a biblioteca de delays
 	delay_ms(20);
 
@@ -210,6 +158,21 @@ int main(void)
 			if (t_us>=cont*T_incremento) // Se for hora de atualizar o seno, procura novo valor. se nao repete o mesmo
 			{
 				saida_char = seno_tabela[cont];
+				//Atualização do PWM
+				/*
+				if (saida_char>127)
+				{
+					timer_set_oc_value(TIM4, TIM_OC1, 0); //PB6
+					timer_set_oc_value(TIM4, TIM_OC2, 0); //PB7
+				}
+				else
+				{
+					timer_set_oc_value(TIM4, TIM_OC1, 127); //PB6
+					timer_set_oc_value(TIM4, TIM_OC2, 127); //PB7
+				}
+				*/
+
+
 				cont++;
 			}
 
@@ -239,10 +202,7 @@ int main(void)
 				i = 0;
 			}		
 
-			/* Saída pro conversor D/A */
-			updateOutput(saida_char);
 			gpio_toggle(GPIOC, GPIO13);
-
 			flag_amostra = 0; //Fim da amostragem
 		}
 	}

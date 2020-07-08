@@ -83,9 +83,9 @@ void tim4_setup(void){ //Timer do PWM
 	timer_enable_oc_output(TIM4,TIM_OC2);
 
 	//Importante: se um PWM tem valor, o outro deve ser zero
-
-	timer_set_oc_value(TIM4, TIM_OC1, 80); //PB6 --tem algo importante aqui
-	timer_set_oc_value(TIM4, TIM_OC2, 127); //PB7
+	//Nessa configuração acredito que os dois tão desativados
+	timer_set_oc_value(TIM4, TIM_OC1, 0); //PB6 
+	timer_set_oc_value(TIM4, TIM_OC2, 127); //PB7 (invertido)
 	timer_enable_counter(TIM4);	
 }
 
@@ -159,18 +159,18 @@ int main(void)
 			{
 				saida_char = seno_tabela[cont];
 				//Atualização do PWM
-				/*
+				
 				if (saida_char>127)
 				{
-					timer_set_oc_value(TIM4, TIM_OC1, 0); //PB6
-					timer_set_oc_value(TIM4, TIM_OC2, 0); //PB7
+					timer_set_oc_value(TIM4, TIM_OC1, 255-saida_char); //PB6
+					timer_set_oc_value(TIM4, TIM_OC2, 127); //PB7
 				}
 				else
 				{
-					timer_set_oc_value(TIM4, TIM_OC1, 127); //PB6
-					timer_set_oc_value(TIM4, TIM_OC2, 127); //PB7
+					timer_set_oc_value(TIM4, TIM_OC1, 0); //PB6
+					timer_set_oc_value(TIM4, TIM_OC2, 127-saida_char); //PB7
 				}
-				*/
+				
 
 
 				cont++;

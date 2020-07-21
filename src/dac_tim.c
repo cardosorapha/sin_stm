@@ -115,7 +115,7 @@ int main(void)
 
 	/* Parâmetros gerais não configuráveis */	
 	uint8_t saida_char = (uint8_t)0; //Valor do seno após conversão de float pra inteiro
-	uint8_t qtd_pontos = 64;
+	uint8_t qtd_pontos = 32;
 	char seno_tabela[qtd_pontos];
 	uint8_t t_ms_att_f = 100; //Tempo em ms de atualização das frequências
 
@@ -154,7 +154,7 @@ int main(void)
 		if (flag_amostra == 1) //Bateu o timer de amostra, atualizo o valor do seno
 		{
 			i = i+1; //Incremento de um tick
-			t_us = t_us+12.5; //Incremento de um tick em us
+			t_us = t_us+20; //Incremento de um tick em us
 			if (t_us>=cont*T_incremento) // Se for hora de atualizar o seno, procura novo valor. se nao repete o mesmo
 			{
 				saida_char = seno_tabela[cont];
@@ -162,23 +162,21 @@ int main(void)
 				
 				if (saida_char>127)
 				{
-					timer_set_oc_value(TIM4, TIM_OC1, 255-saida_char); //PB6
+					timer_set_oc_value(TIM4, TIM_OC1, saida_char-127); //PB6
 					timer_set_oc_value(TIM4, TIM_OC2, 127); //PB7
 				}
 				else
 				{
 					timer_set_oc_value(TIM4, TIM_OC1, 0); //PB6
-					timer_set_oc_value(TIM4, TIM_OC2, 127-saida_char); //PB7
+					timer_set_oc_value(TIM4, TIM_OC2, saida_char); //PB7
 				}
-				
-
-
 				cont++;
 			}
 
 			if (cont==qtd_pontos) // Se o tempo atual for igual ao período, o seno se repete
 			{
-				t_ms = t_ms+64*T_incremento/1000; //Incremento o tempo atual em ms
+				t_ms = t_ms+qtd_pontos*T_incremento/1000; //Incremento o tempo atual em ms
+				//era 64 onde tem qtd_pontos
 
 				if (t_ms>=t_ms_att_f)
 				{
@@ -193,6 +191,7 @@ int main(void)
 						dir = 1;
 						freq_alvo = freq_inicial;
 					}
+					//freq_alvo = 550; //debug
 
 					T_incremento = calculaIncremento(freq_alvo,qtd_pontos);
 					t_ms = 0;

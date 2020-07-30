@@ -73,7 +73,7 @@ void tim4_setup(void){ //Timer do PWM
 	rcc_periph_clock_enable(RCC_TIM4);
 
 	timer_set_mode(TIM4, TIM_CR1_CKD_CK_INT, TIM_CR1_CMS_EDGE, TIM_CR1_DIR_UP);
-	timer_set_prescaler(TIM4, 72000000/(18900000)); // frequencia do tick é o denominador
+	timer_set_prescaler(TIM4, 72000000/(18000000)); // frequencia do tick é o denominador
 	timer_set_period(TIM4, 126); // quantos ticks dão um período
 
 	timer_set_oc_mode(TIM4,TIM_OC1,TIM_OCM_PWM1); 
@@ -115,7 +115,7 @@ int main(void)
 
 	/* Parâmetros gerais não configuráveis */	
 	uint8_t saida_char = (uint8_t)0; //Valor do seno após conversão de float pra inteiro
-	uint8_t qtd_pontos = 32;
+	uint8_t qtd_pontos = 64;
 	char seno_tabela[qtd_pontos];
 	uint8_t t_ms_att_f = 100; //Tempo em ms de atualização das frequências
 
@@ -191,7 +191,7 @@ int main(void)
 						dir = 1;
 						freq_alvo = freq_inicial;
 					}
-					//freq_alvo = 550; //debug
+					freq_alvo = 550; //debug
 
 					T_incremento = calculaIncremento(freq_alvo,qtd_pontos);
 					t_ms = 0;

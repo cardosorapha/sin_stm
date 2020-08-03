@@ -121,7 +121,7 @@ int main(void)
 
 	/* Parâmetros do experimento configuráveis externamente */
 	uint16_t freq_inicial = 30;
-	uint16_t freq_final = 1000;
+	uint16_t freq_final = 700;
 	uint16_t T_experimento = 5000; //Em ms
 
 	/* Consequência da modificação dos parâmetros externos */
@@ -191,7 +191,7 @@ int main(void)
 						dir = 1;
 						freq_alvo = freq_inicial;
 					}
-					freq_alvo = 550; //debug
+					//freq_alvo = 550; //debug
 
 					T_incremento = calculaIncremento(freq_alvo,qtd_pontos);
 					t_ms = 0;

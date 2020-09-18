@@ -1,5 +1,5 @@
 # SIN_STM
-Gerador de senoide utilizando microcontrolador STM32F103C8T6 e conversor D/A DAC0800LCN. Construído com base no toolchain disponível [neste](https://github.com/jeffsjunior/STM32_Toolchain) repositório.
+Gerador de senoide utilizando microcontrolador STM32F103C8T6 e conversão D/A com ponte H. Construído com base no toolchain disponível [neste](https://github.com/jeffsjunior/STM32_Toolchain) repositório.
 
 ## Utilização
 Na pasta **Projects**, execute 
